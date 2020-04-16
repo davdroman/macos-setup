@@ -41,7 +41,7 @@ function fish_prompt
 			set git_info "$git_info$dirty"
 		end
 
-		set git_final ' '$cyan'['$git_info $normal$cyan']'
+		set git_final ' '$cyan'['$git_info $cyan']'
 	end
 
 	echo -n -s $cwd $git_final ' ' $dollar ' '
