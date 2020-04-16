@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# not ready yet
+brew.fish
+fastlane.fish
+git.fish
+github.fish
+
+# private
+sketch.fish
+treatwell.fish
