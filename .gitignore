@@ -1,11 +1,13 @@
 # macOS
 .DS_Store
 
+# Git
+.gitconfig
+
 # not ready yet
 brew.fish
 fastlane.fish
 git.fish
-github.fish
 
 # private
 sketch.fish
