@@ -7,7 +7,6 @@
 # not ready yet
 brew.fish
 fastlane.fish
-git.fish
 
 # private
 sketch.fish
