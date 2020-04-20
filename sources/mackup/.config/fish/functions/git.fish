@@ -22,6 +22,13 @@ function ghcl -a ssh_name repo_shorthand repo_name
     gcl $ssh_name git@github.com:$repo_shorthand.git $repo_name
 end
 
+## GPG
+
+function gusgpg -a sec
+    git config user.signingkey $sec
+    git config commit.gpgsign true
+end
+
 ## Caches & untracked files
 
 alias grm   'git rm -r --cached .'

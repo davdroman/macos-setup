@@ -4,3 +4,7 @@ function gpgd
     cat /tmp/gpgdpb
     rm /tmp/gpgdpb
 end
+
+function gpgl
+    gpg --list-secret-keys --keyid-format LONG
+end
