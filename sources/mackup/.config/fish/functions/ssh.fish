@@ -17,8 +17,8 @@ function ghut -d 'GitHub User Test: attempts GitHub auth with specified user' -a
 end
 
 function gus -d 'Git User Set: sets user key and details to be used in a specific repo' -a username
-    set ssh_path $HOME/.ssh/id_rsa_$username
-    git config core.sshCommand "ssh -i $ssh_path"
+    set ssh_path (ssh-path $username)
+    git config core.sshCommand "ssh -i ~/.ssh/id_rsa_$username"
     set email (cat $ssh_path.pub | cut -d ' ' -f3)
     git config user.name $username
     git config user.email $email
