@@ -1,25 +1,7 @@
-eval (ssh-agent -c > /dev/null) && ssh-add
-
-function gug -d 'Git User Generate: generates new ssh key' -a username email
-    set ssh_path (ssh-path $username)
-    ssh-keygen -t rsa -b 4096 -f $ssh_path -C "$email"
-    pbcopy < $ssh_path.pub
+function sshl -d 'Lists all SSH keys in the SSH Agent'
+    ssh-add -l
 end
 
-function gua -d 'Git User Add: adds user key to ssh keychain' -a username
-    set ssh_path (ssh-path $username)
-    ssh-add -K $ssh_path
-end
-
-function ghut -d 'GitHub User Test: attempts GitHub auth with specified user' -a username
-    set ssh_path (ssh-path $username)
-    ssh -i $ssh_path -T git@github.com
-end
-
-function gus -d 'Git User Set: sets user key and details to be used in a specific repo' -a username
-    set ssh_path (ssh-path $username)
-    git config core.sshCommand "ssh -i ~/.ssh/id_rsa_$username"
-    set email (cat $ssh_path.pub | cut -d ' ' -f3)
-    git config user.name $username
-    git config user.email $email
+function ssh-path -d 'Gets SSH key path for specified username' -a username
+    echo $HOME/.ssh/id_rsa_$username
 end

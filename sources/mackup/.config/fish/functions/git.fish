@@ -22,9 +22,35 @@ function ghcl -a ssh_name repo_shorthand repo_name
     gcl $ssh_name git@github.com:$repo_shorthand.git $repo_name
 end
 
-## GPG
+## SSH/PGP
 
-function gusgpg -a sec
+eval (ssh-agent -c > /dev/null) && ssh-add
+
+function gug -d 'Git User Generate: generates new ssh key' -a username email
+    set ssh_path (ssh-path $username)
+    ssh-keygen -t rsa -b 4096 -f $ssh_path -C "$email"
+    pbcopy < $ssh_path.pub
+end
+
+function gua -d 'Git User Add: adds user key to ssh keychain' -a username
+    set ssh_path (ssh-path $username)
+    ssh-add -K $ssh_path
+end
+
+function ghut -d 'GitHub User Test: attempts GitHub auth with specified user' -a username
+    set ssh_path (ssh-path $username)
+    ssh -i $ssh_path -T git@github.com
+end
+
+function gus -d 'Git User Set: sets user SSH key and details to be used in a specific repo' -a username
+    set ssh_path (ssh-path $username)
+    git config core.sshCommand "ssh -i ~/.ssh/id_rsa_$username"
+    set email (cat $ssh_path.pub | cut -d ' ' -f3)
+    git config user.name $username
+    git config user.email $email
+end
+
+function gusgpg -d 'Git User Set GPG: sets user GPG key to sign all commits in a specific repo' -a sec
     git config user.signingkey $sec
     git config commit.gpgsign true
 end
