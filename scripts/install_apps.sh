@@ -41,7 +41,6 @@ brew cask install                          iterm2
 brew cask install                          keepingyouawake
 mas install 409183694                    # Keynote
 mas install 419330170                    # Moom
-brew_install_if_true                       no-ip-duc $should_install_plex_ms
 mas install 409203825                    # Numbers
 brew cask install                          paw
 brew cask install lukakerr/things/pine   # Pine
