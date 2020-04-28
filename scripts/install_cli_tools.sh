@@ -15,7 +15,7 @@ brew install node
 brew install carthage
 brew install coreutils
 brew install diff-so-fancy
-npm  install firebase-tools -g
+brew install firebase-cli
 brew install fish
 brew install git
 brew install git-cola
@@ -25,10 +25,10 @@ brew install eddieantonio/eddieantonio/imgcat
 brew install mackup
 brew install mas
 brew install micro
+brew install now-cli
 npm  install qrcode -g
 brew install sourcery
 brew install speedtest-cli
-npm  install surge -g
 brew install swiftlint
 brew install thefuck
 brew install wget
