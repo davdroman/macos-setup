@@ -28,38 +28,37 @@ brew_install_if_false() {
 
 should_install_plex_ms=`ask_install "Is this machine a Plex server?"`
 
-mas install 1333542190                   # 1Password
+brew cask install                          1password
 brew cask install                          alfred
-brew cask install                          archiver
 brew cask install                          charles
-mas install 411643860                    # DaisyDisk
-brew cask install                          Deckset
+brew cask install                          daisydisk
+brew cask install                          deckset
 mas install 1081413713                   # GIF Brewery 3
 brew cask install                          google-chrome
 brew cask install                          gpg-suite-no-mail
 brew cask install                          iterm2
 brew cask install                          keepingyouawake
 mas install 409183694                    # Keynote
-mas install 419330170                    # Moom
+brew cask install                          moom
 mas install 409203825                    # Numbers
 brew cask install                          paw
-brew cask install lukakerr/things/pine   # Pine
 brew_install_if_true                       plex-media-server $should_install_plex_ms
 brew_install_if_false                      plex $should_install_plex_ms
 brew cask install                          protonmail-bridge
 brew_install_if_true                       radarr $should_install_plex_ms
+brew cask install                          sf-symbols
 brew cask install                          sketch
-mas install 803453959                    # Slack
-brew_install_if_true                       sonarr $should_install_plex_ms
-chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
+brew cask install                          slack
+brew_install_if_true                       sonarr $should_install_plex_ms && chmod +x /Applications/Sonarr.app/Contents/MacOS/Sonarr
 brew cask install                          spotify
 brew cask install                          sublime-text
-mas install 747648890                    # Telegram
+brew cask install                          telegram
 mas install 904280696                    # Things 3
 brew cask install                          tor-browser
 brew_install_if_true                       torguard $should_install_plex_ms
 brew_install_if_true                       transmission $should_install_plex_ms
+brew cask install                          visual-studio-code
 brew cask install                          vlc
 
 curl -s https://raw.githubusercontent.com/vineetchoudhary/Downloader-for-Apple-Developers/master/install.sh | bash # Xcode Downloader
-rm -rf Downloader.tar.gz
+rm -f Downloader.tar.gz
