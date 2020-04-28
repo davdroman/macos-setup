@@ -30,8 +30,5 @@ npm  install qrcode -g
 brew install sourcery
 brew install speedtest-cli
 brew install swiftlint
-brew install thefuck
-brew install wget
-brew install ykman
 brew install youtube-dl
 brew install keith/formulae/zap
