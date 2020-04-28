@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 brew cask install qlcolorcode
 brew cask install qlstephen
 brew cask install qlmarkdown
