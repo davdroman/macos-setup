@@ -12,5 +12,6 @@ brew cask install provisionql
 brew cask install quicklookapk
 brew cask install quicklook-pat
 brew cask install webpquicklook
+brew cask install google-hangouts
 
 xattr -d -r com.apple.quarantine ~/Library/QuickLook
