@@ -2,9 +2,9 @@
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-ask_install() {
-    echo -n "$1 (y/n)? " >&2
-    read should_install
+ask() {
+    echo -n "$1 " >&2
+    read -e should_install
     echo $should_install
 }
 
@@ -26,7 +26,15 @@ brew_install_if_false() {
     fi
 }
 
-should_install_plex_ms=`ask_install "Is this machine a Plex server?"`
+should_install_plex_ms=`ask "Is this machine a Plex server? (y/n)"`
+
+function xcversion () {
+    GEM_HOME=~/.gem ~/.gem/bin/xcversion "$@"
+}
+
+xcversion list
+xcode_version=`ask "Which Xcode version to install?"`
+xcversion install "$xcode_version"
 
 brew cask install                          1password
 brew cask install                          alfred
@@ -59,6 +67,3 @@ brew_install_if_true                       torguard $should_install_plex_ms
 brew_install_if_true                       transmission $should_install_plex_ms
 brew cask install                          visual-studio-code
 brew cask install                          vlc
-
-curl -s https://raw.githubusercontent.com/vineetchoudhary/Downloader-for-Apple-Developers/master/install.sh | bash # Xcode Downloader
-rm -f Downloader.tar.gz

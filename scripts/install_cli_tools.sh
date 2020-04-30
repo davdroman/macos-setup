@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 
+# Xcode CLI Tools
+
+if ! which xcodebuild >/dev/null; then
+    xcode-select --install
+fi
+
+GEM_HOME=~/.gem gem install xcode-install
+
 # Package Managers
 
 if ! which brew >/dev/null; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" # Homebrew
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 export HOMEBREW_NO_AUTO_UPDATE=1
