@@ -16,8 +16,6 @@ fi
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-brew install node
-
 # CLIs
 
 brew install carthage
@@ -33,8 +31,9 @@ brew install eddieantonio/eddieantonio/imgcat
 brew install mackup
 brew install mas
 brew install micro
+brew install node
 brew install now-cli
-npm  install qrcode -g
+brew install qrencode
 brew install sourcery
 brew install speedtest-cli
 brew install swiftlint
