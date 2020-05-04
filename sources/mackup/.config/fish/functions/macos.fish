@@ -1,8 +1,16 @@
-set MACOS_SETUP_PATH "$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/macOS"
+set MACOS_SETUP_PATH ~/Library/Mobile\ Documents/com~apple~CloudDocs/macOS
 
-alias cd_macos  "cd $MACOS_SETUP_PATH"
-alias tf_macos   "open -a Finder $MACOS_SETUP_PATH"
-alias subl_macos "subl $MACOS_SETUP_PATH"
+function cd_macos
+    cd $MACOS_SETUP_PATH
+end
+
+function tf_macos
+    open -a Finder $MACOS_SETUP_PATH
+end
+
+function subl_macos
+    subl $MACOS_SETUP_PATH
+end
 
 function reset_launchpad
     defaults write com.apple.dock ResetLaunchPad -bool true

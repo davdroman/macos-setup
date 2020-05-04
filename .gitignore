@@ -5,7 +5,7 @@
 .gitconfig
 
 # not ready yet
-brew.fish
+brew_formula.fish
 fastlane.fish
 
 # private
