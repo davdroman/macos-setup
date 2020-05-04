@@ -1,0 +1,8 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+
+cask "plex-media-server"
+cask "radarr"
+cask "sonarr"
+cask "torguard"
+cask "transmission"
