@@ -10,8 +10,13 @@ function fish_greeting
 
 end
 
-alias cd_fish   "cd '$FISH_CONFIG_PATH'"
-alias tf_fish   "open -a Finder '$FISH_CONFIG_PATH'"
+function cd_fish
+    cd $FISH_CONFIG_PATH
+end
+
+function tf_fish
+    open -a Finder $FISH_CONFIG_PATH
+end
 
 function subl_fish
     if test -d $argv
