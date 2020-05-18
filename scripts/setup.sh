@@ -59,3 +59,5 @@ ln -sf "$HOME/Library/Mobile Documents/com~apple~CloudDocs/macOS/sources/.mackup
 mackup restore -f
 
 defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
+
+git config --global remote.origin.prune true
