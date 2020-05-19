@@ -18,7 +18,7 @@ function reset_launchpad
 end
 
 function update_all_packages
-    gem update && \
+    gem update (gem list | cut -d ' ' -f 1) && \
     gem cleanup && \
     brew update && \
     brew cask upgrade && \
