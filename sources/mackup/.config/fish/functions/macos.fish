@@ -18,6 +18,7 @@ function reset_launchpad
 end
 
 function update_all_packages
+    CURL_SSL_BACKEND=secure-transport \
     gem update (gem list | cut -d ' ' -f 1) && \
     gem cleanup && \
     brew update && \
