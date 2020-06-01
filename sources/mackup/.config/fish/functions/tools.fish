@@ -9,5 +9,5 @@ end
 
 function ytdl
     set url (pbpaste)
-    youtube-dl -i -w -c "$url"
+    youtube-dl "$url" --ignore-errors --continue --format mp4
 end
