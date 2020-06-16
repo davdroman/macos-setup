@@ -1,3 +1,12 @@
+function xclist
+    xcversion update
+    xcversion list
+end
+
+function xcinstall
+    xcversion install $argv
+end
+
 function xcclean
     set folder_prefix $argv
     if not test -d $folder_prefix
