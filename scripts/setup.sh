@@ -20,6 +20,7 @@ function xcversion () {
     GEM_HOME=~/.gem ~/.gem/bin/xcversion "$@"
 }
 
+xcversion update
 xcversion list
 xcode_version=`ask "Which Xcode version to install?"`
 xcversion install "$xcode_version"
