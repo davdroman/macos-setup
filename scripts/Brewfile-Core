@@ -3,7 +3,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap "human-entertainment/tap"
 tap "keith/formulae"
 
 brew "carthage"
