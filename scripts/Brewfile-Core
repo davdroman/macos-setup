@@ -55,10 +55,8 @@ cask "sherlock"
 cask "sketch"
 cask "slack"
 cask "spotify"
-cask "steam"
 cask "sublime-text"
 cask "telegram"
-mas  "Things", id: 904280696
 cask "tor-browser"
 mas  "Trello", id: 1278508951
 cask "visual-studio-code"
