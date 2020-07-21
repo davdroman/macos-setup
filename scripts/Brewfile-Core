@@ -52,6 +52,7 @@ mas  "Pages", id: 409201541
 cask "paw"
 cask "protonmail-bridge"
 cask "sf-symbols"
+cask "sherlock"
 cask "sketch"
 cask "slack"
 cask "spotify"
