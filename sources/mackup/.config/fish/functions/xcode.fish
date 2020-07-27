@@ -4,7 +4,11 @@ function xclist
 end
 
 function xcinstall
-    xcversion install $argv
+    xcversion install $argv --force
+end
+
+function xcselect
+    xcversion select $argv --symlink
 end
 
 function xcclean
