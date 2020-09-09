@@ -72,7 +72,7 @@ function gsw
             clear && printf '\e[3J'
             git --no-optional-locks status
         end
-        sleep 1.5
+        sleep 2
     end
 end
 
@@ -86,7 +86,7 @@ function glw
             clear && printf '\e[3J'
             git --no-optional-locks --no-pager log --abbrev-commit --pretty=oneline -10
         end
-        sleep 3
+        sleep 2
     end
 end
 
@@ -211,7 +211,7 @@ function gdaw
                 cat (random choice $FISH_CONFIG_PATH/resources/ascii/*)
             end
         end
-        sleep 1.5
+        sleep 2
     end
 end
 
