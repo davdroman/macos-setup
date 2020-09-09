@@ -2,6 +2,10 @@ function rot13
     echo $argv | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 end
 
+function sha256f
+    shasum -a 256 $argv | cut -d ' ' -f1
+end
+
 function qr
     set text (pbpaste)
     qrencode -t ansiutf8 "$text"
