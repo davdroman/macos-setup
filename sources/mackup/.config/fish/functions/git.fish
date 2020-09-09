@@ -97,7 +97,7 @@ alias gba      'gb -a'
 alias gbm      'git branch -m'
 
 function gbcln
-    git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+    git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
 end
 
 function gco -a branch_search_term
