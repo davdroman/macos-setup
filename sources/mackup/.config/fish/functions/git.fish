@@ -171,10 +171,12 @@ alias grf    'git reset HEAD'
 alias gra    'git reset .'
 
 function gr
+    gst
     git reset HEAD~$argv
 end
 
 function gr!
+    gst
     git reset HEAD~$argv --hard
 end
 
