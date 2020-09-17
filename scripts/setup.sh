@@ -56,7 +56,6 @@ xattr -d -r com.apple.quarantine ~/Library/QuickLook
 mkdir -p "$HOME/Development"
 
 ln -sf "$HOME/Library/Mobile Documents/com~apple~CloudDocs/macOS/sources/mackup/.mackup.cfg" "$HOME"
-ln -sf "$HOME/Library/Mobile Documents/com~apple~CloudDocs/macOS/sources/.mackup" "$HOME"
 mackup restore -f
 
 defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
