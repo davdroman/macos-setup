@@ -285,7 +285,9 @@ end
 function gm -a branch_search_term
     set current_branch (current_branch)
     set branch_to_merge (branch_containing $branch_search_term)
-    gcop $branch_to_merge
+    gco $branch_to_merge
+    gbt
+    git pull origin --tags --rebase
     git checkout $current_branch
     git merge $branch_to_merge
 end
