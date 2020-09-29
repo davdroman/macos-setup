@@ -13,7 +13,7 @@ end
 
 function ytdl
     set url (pbpaste)
-    youtube-dl "$url" --ignore-errors --continue --format mp4
+    youtube-dl "$url" --ignore-errors --continue --no-overwrites --format mp4
 end
 
 function video_compress
