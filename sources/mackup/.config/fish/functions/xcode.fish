@@ -20,6 +20,13 @@ function xcclean
     end
 end
 
+function xcwipe
+    rm -rf ~/Library/Developer/Xcode/DerivedData
+    rm -rf ~/Library/Caches/org.carthage.CarthageKit
+    rm -rf ~/Library/Caches/carthage
+    rm -rf ./Carthage
+end
+
 function xcsimrecord
     xcrun simctl io booted recordVideo ~/Downloads/sim_recording.mov -f
 end
