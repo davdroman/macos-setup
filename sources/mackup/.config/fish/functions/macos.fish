@@ -21,7 +21,7 @@ function update_all_packages
     CURL_SSL_BACKEND=secure-transport \
     gem update (gem list | cut -d ' ' -f 1) --no-document && \
     gem cleanup && \
-    brew cask upgrade && \
+    brew upgrade --cask && \
     brew upgrade && \
     brew cleanup
 end
