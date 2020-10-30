@@ -295,6 +295,20 @@ end
 alias gmmtr  'gm master'
 alias gmrel  'gm release'
 
+## Rebasing
+
+function grb -a upstream_branch
+    set current_branch (current_branch)
+    git checkout $upstream_branch
+    gbt
+    git pull origin --tags --rebase
+    git checkout $current_branch
+    git rebase $upstream_branch
+end
+
+alias grbmtr  'grb master'
+alias grbrel  'grb release'
+
 ## Pushing
 
 alias gps    'git push -u origin HEAD'
