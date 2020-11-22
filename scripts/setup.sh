@@ -28,7 +28,7 @@ xcversion install "$xcode_version"
 # Homebrew
 
 if ! which brew >/dev/null; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 DIR=$(dirname "$(realpath -s "$0")")
