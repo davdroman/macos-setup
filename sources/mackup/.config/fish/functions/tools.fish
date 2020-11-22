@@ -11,6 +11,10 @@ function qr
     qrencode -t ansiutf8 "$text"
 end
 
+function dl
+    curl -OL $argv
+end
+
 function ytdl
     set url (pbpaste)
     youtube-dl "$url" --ignore-errors --continue --no-overwrites --format mp4
