@@ -10,16 +10,9 @@ ask() {
 
 should_install_plex_ms=`ask "Is this machine a Plex server? (y/n)"`
 
-# Xcode + CLI Tools
+# Xcode
 
-if ! which xcversion >/dev/null; then
-    GEM_HOME=~/.gem gem install xcode-install
-fi
-
-function xcversion () {
-    GEM_HOME=~/.gem ~/.gem/bin/xcversion "$@"
-}
-
+sudo gem install xcode-install
 xcversion update
 xcversion list
 xcode_version=`ask "Which Xcode version to install?"`
@@ -42,6 +35,13 @@ if [ "$should_install_plex_ms" != "${should_install_plex_ms#[Yy]}" ]; then
 else
     brew bundle --file "$DIR/Brewfile-Default" --no-lock
 fi
+
+# Ruby
+
+rbenv install --list
+ruby_version=`ask "Which Ruby version to install?"`
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install "$ruby_version"
+rbenv global "$ruby_version"
 
 # Install fonts in resources folder
 

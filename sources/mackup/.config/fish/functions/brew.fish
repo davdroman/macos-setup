@@ -19,3 +19,10 @@ function brew_setup_clean!
     cat $MACOS_SETUP_PATH/scripts/Brewfile-Core $BREWFILE_DEFAULT > /tmp/Brewfile
     brew bundle cleanup --file /tmp/Brewfile --force
 end
+
+function brew_upgrade_all
+    CURL_SSL_BACKEND=secure-transport \
+    brew upgrade --cask && \
+    brew upgrade && \
+    brew cleanup
+end
