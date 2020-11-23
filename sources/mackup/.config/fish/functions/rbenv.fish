@@ -10,3 +10,23 @@ end
 
 rbenv init - | source
 dedup_path # needed cause rbenv does 'set -g' by default
+
+# Helpers
+
+function rblist
+    rbenv install --list
+end
+
+function rbinstall
+    set OPENSSL_DIR (brew --prefix openssl)
+    RUBY_CONFIGURE_OPTS="--with-openssl-dir=$OPENSSL_DIR" \
+    rbenv install $argv
+end
+
+function rbinstalled
+    rbenv versions
+end
+
+function rbselect
+    rbenv global $argv
+end
