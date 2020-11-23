@@ -40,7 +40,7 @@ fi
 
 rbenv install --list
 ruby_version=`ask "Which Ruby version to install?"`
-RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" rbenv install "$ruby_version"
+RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)" rbenv install "$ruby_version"
 rbenv global "$ruby_version"
 
 # Install fonts in resources folder
