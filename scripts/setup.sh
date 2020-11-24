@@ -12,11 +12,11 @@ should_install_plex_ms=`ask "Is this machine a Plex server? (y/n)"`
 
 # Xcode
 
-sudo gem install xcode-install
-xcversion update
-xcversion list
-xcode_version=`ask "Which Xcode version to install?"`
-xcversion install "$xcode_version"
+# sudo gem install xcode-install
+# xcversion update
+# xcversion list
+# xcode_version=`ask "Which Xcode version to install?"`
+# xcversion install "$xcode_version"
 
 # CLI Tools
 
