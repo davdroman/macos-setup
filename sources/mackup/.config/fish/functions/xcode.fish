@@ -8,6 +8,10 @@ function xcinstall
     xcversion install $argv --force
 end
 
+function xcinstalled
+    xcversion installed
+end
+
 function xcselect
     xcversion select $argv
 end
