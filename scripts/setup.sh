@@ -18,6 +18,20 @@ xcversion list
 xcode_version=`ask "Which Xcode version to install?"`
 xcversion install "$xcode_version"
 
+# CLI Tools
+
+CLI_TOOLS_DIR="/Library/Developer/CommandLineTools"
+
+if [ ! -d $CLI_TOOLS_DIR ]; then
+    xcode-select --install
+fi
+
+until [ -d $CLI_TOOLS_DIR ]; do
+    sleep 3
+done
+
+sleep 10
+
 # Homebrew
 
 if ! which brew >/dev/null; then
