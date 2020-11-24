@@ -16,6 +16,10 @@ function xcselect
     xcversion select $argv
 end
 
+function xcuninstall
+    xcversion uninstall $argv
+end
+
 function xcclean
     set folder_prefix $argv
     if not test -d $folder_prefix
