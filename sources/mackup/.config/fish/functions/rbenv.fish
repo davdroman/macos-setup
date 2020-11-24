@@ -30,3 +30,7 @@ end
 function rbselect
     rbenv global $argv
 end
+
+function rbuninstall
+  rbenv uninstall $argv
+end
