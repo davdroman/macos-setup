@@ -171,13 +171,23 @@ alias grf    'git reset HEAD'
 alias gra    'git reset .'
 
 function gr
-    gst
-    git reset HEAD~$argv
+    switch (count $argv)
+    case 0
+        echo 'error: must specify number of commits to reset'
+    case '*'
+        gst
+        git reset HEAD~$argv
+    end
 end
 
 function gr!
-    gst
-    git reset HEAD~$argv --hard
+    switch (count $argv)
+    case 0
+        echo 'error: must specify number of commits to reset'
+    case '*'
+        gst
+        git reset HEAD~$argv --hard
+    end
 end
 
 ## Pulling
