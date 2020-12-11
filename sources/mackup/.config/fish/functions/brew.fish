@@ -22,7 +22,7 @@ end
 
 function brew_upgrade_all
     CURL_SSL_BACKEND=secure-transport \
-    brew upgrade --cask && \
+    brew upgrade --cask --greedy && \
     brew upgrade && \
     brew cleanup
 end
