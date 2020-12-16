@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Disable quarantine
+
+sudo defaults write com.apple.LaunchServices LSQuarantine -bool NO
+
 # Prompts
 
 ask() {
