@@ -323,3 +323,9 @@ alias grbrel  'grb release'
 
 alias gps    'git push -u origin HEAD'
 alias gps!   'gps --force'
+
+## Issue -> Pull Request with `hub`
+
+function ghpr -a issue_number
+    hub pull-request -i $issue_number
+end
