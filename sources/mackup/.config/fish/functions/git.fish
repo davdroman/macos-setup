@@ -327,5 +327,5 @@ alias gps!   'gps --force'
 ## Issue -> Pull Request with `hub`
 
 function ghpr -a issue_number
-    hub pull-request -i $issue_number
+    hub pull-request --issue $issue_number --browse
 end
