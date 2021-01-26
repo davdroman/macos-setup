@@ -51,6 +51,7 @@ mas  "Numbers", id: 409203825
 mas  "Pages", id: 409201541
 cask "paw"
 cask "protonmail-bridge"
+cask "rotato"
 cask "sf-symbols"
 cask "sherlock"
 cask "sim-genie"
