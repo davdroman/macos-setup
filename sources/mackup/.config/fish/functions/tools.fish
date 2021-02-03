@@ -17,7 +17,7 @@ end
 
 function ytdl
     set url (pbpaste)
-    youtube-dl "$url" --ignore-errors --continue --no-overwrites --format mp4
+    youtube-dl "$url" --ignore-errors --continue --no-overwrites --format mp4 --cookies "/Volumes/Media 2/YouTube/youtube.com_cookies.txt"
 end
 
 function video_compress
