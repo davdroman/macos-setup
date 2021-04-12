@@ -30,6 +30,7 @@ brew "swiftlint"
 brew "ykman"
 brew "youtube-dl"
 brew "eddieantonio/eddieantonio/imgcat"
+brew "xcinfo"
 brew "keith/formulae/zap"
 
 cask "1password"

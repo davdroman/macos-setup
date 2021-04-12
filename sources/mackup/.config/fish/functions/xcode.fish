@@ -1,23 +1,21 @@
 function xclist
-    xcversion update
-    xcversion list
+    xcinfo list --update-list
 end
 
 function xcinstall
-    xcversion update
-    xcversion install $argv --force
+    xcinfo install $argv --update-list
 end
 
 function xcinstalled
-    xcversion installed
+    xcinfo installed
 end
 
-function xcselect
-    xcversion select $argv
+function xcselect -a xcode_app_name
+    sudo xcode-select --switch "/Applications/$xcode_app_name.app/Contents/Developer"
 end
 
 function xcuninstall
-    xcversion uninstall $argv
+    xcinfo uninstall $argv
 end
 
 function xcclean
