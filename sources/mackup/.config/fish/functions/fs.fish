@@ -16,6 +16,10 @@ function cdp
     cd ~/Development/"$argv"
 end
 
+function cdd
+    cd ~/Downloads
+end
+
 function o
     set filename $argv[1]
     set lc_filename (echo $filename | tr '[:upper:]' '[:lower:]')
