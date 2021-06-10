@@ -6,6 +6,10 @@ function sha256f
     shasum -a 256 $argv | cut -d ' ' -f1
 end
 
+function ct
+    cointop --only-table
+end
+
 function qr
     set text (pbpaste)
     qrencode -t ansiutf8 "$text"
