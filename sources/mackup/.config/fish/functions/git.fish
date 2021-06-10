@@ -220,7 +220,8 @@ function gdaw
             if test -n "$git_diff"
                 git diff --color --indent-heuristic HEAD | diff-so-fancy # ':(exclude)*.pbxproj'
             else
-                cat (random choice $FISH_CONFIG_PATH/resources/ascii/*)
+                echo 'No diffable changes'
+                # imgcat (random choice $FISH_CONFIG_PATH/resources/gif/*) --height (tput lines)
             end
         end
         sleep 2
