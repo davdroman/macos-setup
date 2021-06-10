@@ -36,13 +36,13 @@ brew "keith/formulae/zap"
 
 cask "1password"
 cask "alfred"
+cask "brave-browser"
 mas  "Bear", id: 1091189122
 cask "charles"
 cask "daisydisk"
 cask "deckset"
 cask "electrum"
 mas  "GIF Brewery 3", id: 1081413713
-cask "google-chrome"
 cask "gpg-suite-no-mail"
 cask "iterm2"
 mas  "Keynote", id: 409183694
