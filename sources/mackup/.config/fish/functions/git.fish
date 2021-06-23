@@ -116,6 +116,8 @@ function gcop
     gp
 end
 
+alias mn        'git checkout main'
+alias mnp       'mn && gp'
 alias mtr       'git checkout master'
 alias mtrp      'mtr && gp'
 alias rel       'git checkout release'
@@ -303,6 +305,7 @@ function gm -a branch_search_term
     git merge $branch_to_merge
 end
 
+alias gmmn   'gm main'
 alias gmmtr  'gm master'
 alias gmrel  'gm release'
 
@@ -317,6 +320,7 @@ function grb -a upstream_branch
     git rebase $upstream_branch
 end
 
+alias grbmn   'grb main'
 alias grbmtr  'grb master'
 alias grbrel  'grb release'
 
