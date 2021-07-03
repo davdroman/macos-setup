@@ -31,10 +31,10 @@ sleep 10
 # Homebrew
 
 if ! which brew >/dev/null; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-DIR=$(dirname "$(realpath -s "$0")")
+DIR=$(cd "$(dirname "$0")" && pwd)
 
 brew bundle --file "$DIR/Brewfile-Core" --no-lock
 
