@@ -1,5 +1,5 @@
 function _git_branch_name
-	echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+	echo (git branch --show-current 2>/dev/null)
 end
 
 function _git_branch_name_short
