@@ -65,6 +65,8 @@ xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 mkdir -p "$HOME/Development"
 
+touch ~/.hushlogin # silence 'Last Login'
+
 ln -sf "$HOME/Library/Mobile Documents/com~apple~CloudDocs/macOS/sources/mackup/.mackup.cfg" "$HOME"
 mackup restore -f
 
