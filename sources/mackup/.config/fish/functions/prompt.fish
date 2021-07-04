@@ -13,7 +13,7 @@ end
 
 function fish_prompt
 	function _is_git_dirty
-		echo (git status -s --ignore-submodules=dirty ^/dev/null)
+		echo (git status -s --ignore-submodules=dirty)
 	end
 
 	set -l last_status $status
