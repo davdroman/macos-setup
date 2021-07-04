@@ -65,29 +65,15 @@ alias gcln  'git clean -fd'
 alias gs    'git status'
 
 function gsw
-    while true
-        set git_tmp_diff (git --no-optional-locks status)
-        if test "$git_diff" != "$git_tmp_diff"
-            set git_diff $git_tmp_diff
-            clear && printf '\e[3J'
-            git --no-optional-locks status
-        end
-        sleep 2
-    end
+    watch --no-title --color --beep --interval 2 \
+        'git --no-optional-locks -c color.status=always status'
 end
 
 alias gl    'git log'
 
 function glw
-    while true
-        set git_tmp_diff (git --no-optional-locks --no-pager log --abbrev-commit --pretty=oneline -10)
-        if test "$git_diff" != "$git_tmp_diff"
-            set git_diff $git_tmp_diff
-            clear && printf '\e[3J'
-            git --no-optional-locks --no-pager log --abbrev-commit --pretty=oneline -10
-        end
-        sleep 2
-    end
+    watch --no-title --color --beep --interval 2 \
+        'git --no-optional-locks --no-pager -c color.diff=always log --abbrev-commit --pretty=oneline -10'
 end
 
 ## Branching
@@ -212,22 +198,8 @@ function gsh
 end
 
 function gdaw
-    set git_diff /dev/null
-
-    while true
-        set git_tmp_diff (git --no-optional-locks --no-pager diff HEAD)
-        if test "$git_diff" != "$git_tmp_diff"
-            set git_diff $git_tmp_diff
-            clear && printf '\e[3J'
-            if test -n "$git_diff"
-                git diff --color --indent-heuristic HEAD | diff-so-fancy # ':(exclude)*.pbxproj'
-            else
-                echo 'No diffable changes'
-                # imgcat (random choice $FISH_CONFIG_PATH/resources/gif/*) --height (tput lines)
-            end
-        end
-        sleep 2
-    end
+    watch --no-title --color --beep --interval 2 \
+        'git --no-optional-locks diff --color --indent-heuristic HEAD | diff-so-fancy'
 end
 
 ## Staging
