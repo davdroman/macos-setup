@@ -34,6 +34,13 @@ if ! which brew >/dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+if [[ `uname -m` == 'arm64' ]]; then
+    if ! which brew >/dev/null; then
+        echo 'Adding /opt/homebrew/bin to $PATH'
+        sudo echo -e "/opt/homebrew/bin\n$(cat /etc/paths)" > /etc/paths
+    fi
+fi
+
 DIR=$(cd "$(dirname "$0")" && pwd)
 
 brew bundle --file "$DIR/Brewfile-Core" --no-lock
@@ -44,6 +51,14 @@ if [ "$should_install_plex_ms" != "${should_install_plex_ms#[Yy]}" ]; then
     mkdir -p "$HOME/Downloads/Torrent/Incomplete"
 else
     brew bundle --file "$DIR/Brewfile-Default" --no-lock
+fi
+
+if [[ `uname -m` == 'arm64' ]]; then
+    if ! grep -q '/opt/homebrew/bin/fish' /etc/shells; then
+        echo 'Adding /opt/homebrew/bin/fish to /etc/shells'
+        sudo echo '/opt/homebrew/bin/fish' >> /etc/shells
+    fi
+    chsh -s /opt/homebrew/bin/fish
 fi
 
 # Ruby
