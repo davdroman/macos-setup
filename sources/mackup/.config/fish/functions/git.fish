@@ -65,14 +65,14 @@ alias gcln  'git clean -fd'
 alias gs    'git status'
 
 function gsw
-    watch --no-title --color --beep --interval 2 \
+    watch --no-title --color --interval 2 \
         'git --no-optional-locks -c color.status=always status'
 end
 
 alias gl    'git log'
 
 function glw
-    watch --no-title --color --beep --interval 2 \
+    watch --no-title --color --interval 2 \
         'git --no-optional-locks --no-pager -c color.diff=always log --abbrev-commit --pretty=oneline -10'
 end
 
@@ -198,7 +198,7 @@ function gsh
 end
 
 function gdaw
-    watch --no-title --color --beep --interval 2 \
+    watch --no-title --color --interval 2 \
         'git --no-optional-locks diff --color --indent-heuristic HEAD | diff-so-fancy'
 end
 
