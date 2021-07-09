@@ -1,1 +1,1 @@
-set -x PATH /usr/local/opt/node@14/bin $PATH
+fish_add_path /opt/homebrew/opt/node@14/bin
