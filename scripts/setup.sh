@@ -2,6 +2,7 @@
 
 # Disable quarantine
 
+sudo defaults write /Library/Preferences/com.apple.security GKAutoRearm -bool NO
 sudo defaults write com.apple.LaunchServices LSQuarantine -bool NO
 
 # Prompts
