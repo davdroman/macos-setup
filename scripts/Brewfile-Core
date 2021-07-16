@@ -37,7 +37,6 @@ brew "zap"
 cask "1password"
 cask "alfred"
 cask "brave-browser"
-mas  "Bear", id: 1091189122
 cask "charles"
 cask "daisydisk"
 cask "deckset"
@@ -49,6 +48,7 @@ mas  "Keynote", id: 409183694
 cask "keepingyouawake"
 cask "monero-wallet"
 cask "moom"
+cask "notion"
 mas  "Numbers", id: 409203825
 mas  "Pages", id: 409201541
 cask "paw"
