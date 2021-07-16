@@ -18,10 +18,10 @@ function tf_fish
     open -a Finder $FISH_CONFIG_PATH
 end
 
-function subl_fish
+function ed_fish
     if test -d $argv
-        subl $FISH_CONFIG_PATH
+        code $FISH_CONFIG_PATH
     else
-        subl $FISH_CONFIG_PATH/functions/$argv.fish
+        code $FISH_CONFIG_PATH/functions/$argv.fish
     end
 end

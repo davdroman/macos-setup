@@ -8,6 +8,6 @@ function tf_icloud
     open -a Finder $ICLOUD_DRIVE_PATH
 end
 
-function subl_icloud
-    subl $ICLOUD_DRIVE_PATH
+function ed_icloud
+    code $ICLOUD_DRIVE_PATH
 end

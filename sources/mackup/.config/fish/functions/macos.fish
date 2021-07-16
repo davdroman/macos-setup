@@ -8,8 +8,8 @@ function tf_macos
     open -a Finder $MACOS_SETUP_PATH
 end
 
-function subl_macos
-    subl $MACOS_SETUP_PATH
+function ed_macos
+    code $MACOS_SETUP_PATH
 end
 
 function reset_launchpad
