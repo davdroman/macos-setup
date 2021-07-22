@@ -16,7 +16,7 @@ function qr
 end
 
 function dl
-    curl -OL $argv
+    curl --progress-bar -OL $argv
 end
 
 function ytdl
